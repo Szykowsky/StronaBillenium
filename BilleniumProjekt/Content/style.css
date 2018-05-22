@@ -1,0 +1,153 @@
+﻿html {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+    font-family: 'Poiret One', cursive;
+}
+
+img {
+    width: 100%;
+    margin-left: -16px;
+    margin-top: -30px;
+}
+
+.container {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+.back {
+    -webkit-transform: translateZ(-1px) scale(2);
+    transform: translateZ(-1px) scale(2);
+    position: relative;
+}
+
+.front {
+    background-color: #404247;
+    padding: 14em 1em;
+    position: relative;
+    z-index: 2;
+}
+
+.menu {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+ul, ul li {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    float: left;
+    padding-left: 6px;
+    border: 1px solid 000;
+}
+
+    ul li {
+        float: left;
+    }
+
+    ul a:link, ul a:visited {
+        text-decoration: none;
+        display: block;
+        font-weight: bold;
+        color: #fff;
+        padding: 5px 130px;
+        border-right: 1px solid #fff;
+    }
+
+li:first-child {
+    border-left: 1px solid #fff;
+}
+
+ul a:hover {
+    background-color: #404247;
+}
+
+
+h2, h1 {
+    -webkit-transform: translateZ(-0.5px) scale(1.5);
+    transform: translateZ(-0.5px) scale(1.5);
+    position: absolute;
+    top: 10em;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    margin-top: -450px;
+    font-size: 300%;
+}
+
+header p {
+    font-size: 200%;
+    color: #fff;
+}
+
+h1 {
+    font-size: 200%;
+    color: #fff;
+}
+
+table {
+    margin-left: 400px;
+    margin-right: auto;
+}
+tr td {
+    color: #fff;
+    height: 30px;
+}
+
+#login-table {
+}
+
+    #login-table tr td {
+        color: #fff;
+        height: 30px;
+        width: 220px;
+        font-size: 150%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #login-table textarea {
+        width: 300px;
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    #login-table input[type=text] {
+        width: 300px;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    #login-table input[type=submit] {
+        width: 150px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: white;
+        float: right;
+    }
+
+footer {
+    background-color: #404247;
+    text-align: center;
+    color: #fff;
+}

@@ -1,0 +1,48 @@
+﻿@model BilleniumProjekt.ViewModels.FormViewModel
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Billenium Rejestracja</title>
+    <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" />
+    <link href=@Url.Content("https://fonts.googleapis.com/css?family=Poiret+One") rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <img class="back" src=@Url.Content("~/Content/Images/pic1.jpg") alt="" />
+        <h2>Billenium - rejestracja na praktyki</h2>
+        <header class="front">
+            @Html.AntiForgeryToken()
+
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+            {
+                <table id="login-table">
+                    <tr>
+                        <td>@Html.LabelFor(o => o.Name, "Imię: ")</td>
+                        <td>@Html.TextBoxFor(o => o.Name)</td>
+                        <td style="color: #ff0000; font-weight:bold;">@Html.ValidationMessageFor(o => o.Name)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.LabelFor(o => o.Surname, "Nazwisko: ")</td>
+                        <td>@Html.TextBoxFor(o => o.Surname)</td>
+                        <td style="color: #ff0000; font-weight:bold;">@Html.ValidationMessageFor(o => o.Surname)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.LabelFor(o => o.Comment, "Opisz siebie: ")</td>
+                        <td>@Html.TextAreaFor(o => o.Comment)</td>
+                        <td style="color: #ff0000; font-weight:bold;">@Html.ValidationMessageFor(o => o.Comment)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Potwierdź" /></td>
+                        <td></td>
+                    </tr>
+                </table>
+            }
+        </header>
+    </div>
+    <footer>
+        &copy; Kacper Szymanek 2018
+    </footer>
+</body>
+</html>
